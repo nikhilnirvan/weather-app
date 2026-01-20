@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 8px;
+}
+
+.search-box button,
+.location-btn {
+    padding: 8px;
+    margin-top: 8px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.location-btn {
+    background: #2196F3;
+}
+
+.loader {
+    display: none;
+    margin: 15px auto;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #4CAF50;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.weather-box {
+    display: none;
+    text-align: center;
+}
+
+.weather-box img {
+    display: block;       
+    margin: 5px auto;   
+    width: 70px;
+
+}
+#icon {
+  display: block;
+    margin: 15px auto;
+    width: 80px;
+    height: 80px;
+
+
+    background: none;
+    border-radius: 0;
+}
+.weather-box {
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+}
+.dark-btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+body.dark {
+    background: linear-gradient(to right, #141E30, #243B55);
+}
+
+body.dark .container {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+.top-bar {
+    display: center;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
